@@ -3,7 +3,6 @@ import 'package:cleaningapp/config/theme/colors.dart';
 import 'package:cleaningapp/config/theme/text_theme_style.dart';
 import 'package:cleaningapp/utils/gaps.dart';
 import 'package:flutter/material.dart';
-import 'package:cleaningapp/ColorScheme.dart';
 import 'package:go_router/go_router.dart';
 
 class SplashView extends StatelessWidget {
@@ -11,7 +10,7 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: purple,
+      backgroundColor: AppColors.primaryColor,
       body: Column(
         children: [
           Gaps.verticalGapOf(30),

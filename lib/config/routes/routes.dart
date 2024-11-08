@@ -1,5 +1,6 @@
 import 'package:cleaningapp/config/routes/routes_name.dart';
 import 'package:cleaningapp/views/Splash/splash_view.dart';
+import 'package:cleaningapp/views/calender/CalendarPage.dart';
 import 'package:cleaningapp/views/home%20/home_view.dart';
 
 import 'package:go_router/go_router.dart';
@@ -15,6 +16,11 @@ final router = GoRouter(
       path: RouteName.homeRoute,
       builder: (context, state) => const HomeView(),
       name: RouteName.homeRoute,
+    ),
+    GoRoute(
+      path: RouteName.calenderRoute,
+      builder: (context, state) => const CalendarPage(),
+      name: RouteName.calenderRoute,
     ),
   ],
 );
