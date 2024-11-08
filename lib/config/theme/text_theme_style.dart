@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 
 class AppTextStyles {
   static TextStyle textHeading({
-    Color color = AppColors.primaryColor,
+    Color color = AppColors.white,
     double fontSize = 28,
-    FontWeight fontWeight = FontWeight.bold,
+    FontWeight fontWeight = FontWeight.w900,
     String fontFamily = 'ubuntu',
   }) {
     return TextStyle(
@@ -60,9 +60,9 @@ class AppTextStyles {
   }
 
   static TextStyle textLabel({
-    Color color = AppColors.labelColor,
-    double fontSize = 16,
-    FontWeight fontWeight = FontWeight.w600,
+    Color color = AppColors.white,
+    double fontSize = 18,
+    FontWeight fontWeight = FontWeight.w400,
     String fontFamily = 'ubuntu',
   }) {
     return TextStyle(

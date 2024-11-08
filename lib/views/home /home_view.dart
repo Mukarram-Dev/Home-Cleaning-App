@@ -1,30 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:cleaningapp/ColorScheme.dart';
-import 'package:cleaningapp/views/calender/CalendarPage.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
+
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        fontFamily: 'ubuntu',
-      ),
-      debugShowCheckedModeBanner: false,
-      home: mainPage(),
-      routes: {
-        '/CalendarPage': (context) => CalendarPage(),
-      },
-    );
-  }
+  State<HomeView> createState() => _HomeViewState();
 }
 
-class mainPage extends StatefulWidget {
-  @override
-  _mainPageState createState() => _mainPageState();
-}
-
-class _mainPageState extends State<mainPage> {
+class _HomeViewState extends State<HomeView> {
   String selectedType = "initial";
   String selectedFrequency = "monthly";
   @override

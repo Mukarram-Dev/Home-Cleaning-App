@@ -1,4 +1,7 @@
 import 'package:cleaningapp/config/routes/routes_name.dart';
+import 'package:cleaningapp/config/theme/colors.dart';
+import 'package:cleaningapp/config/theme/text_theme_style.dart';
+import 'package:cleaningapp/utils/gaps.dart';
 import 'package:flutter/material.dart';
 import 'package:cleaningapp/ColorScheme.dart';
 import 'package:go_router/go_router.dart';
@@ -11,6 +14,7 @@ class SplashView extends StatelessWidget {
       backgroundColor: purple,
       body: Column(
         children: [
+          Gaps.verticalGapOf(30),
           Container(
             width: 100,
             height: 50,
@@ -24,8 +28,7 @@ class SplashView extends StatelessWidget {
           ),
           Text(
             "Clean Home\nClean Life",
-            style: TextStyle(
-                fontSize: 40, color: Colors.white, fontWeight: FontWeight.w900),
+            style: AppTextStyles.textHeading(fontSize: 40),
             textAlign: TextAlign.center,
           ),
           SizedBox(
@@ -33,11 +36,7 @@ class SplashView extends StatelessWidget {
           ),
           Text(
             "Book Cleans At The Comfort \nOf Your Home",
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.white,
-              fontWeight: FontWeight.w400,
-            ),
+            style: AppTextStyles.textLabel(color: AppColors.white),
             textAlign: TextAlign.center,
           ),
           SizedBox(
@@ -68,11 +67,9 @@ class SplashView extends StatelessWidget {
                           BorderRadius.only(topLeft: Radius.circular(20)),
                       color: Colors.white),
                   child: Text(
-                    'Continue..',
-                    style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w600,
-                        color: purple),
+                    'Get Started',
+                    style:
+                        AppTextStyles.textLabel(color: AppColors.primaryColor),
                   ),
                 ),
               )
