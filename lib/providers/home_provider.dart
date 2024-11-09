@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 
-class HomeProvider with ChangeNotifier {
-  final _selectedCleaning = ValueNotifier<String>('');
-  String get selectedCleaning => _selectedCleaning.value;
+class HomeProvider extends ChangeNotifier {
+  String _selectedCleaning = 'initial';
+  String _selectedFrequency = 'weekly';
+
+  String get selectedCleaning => _selectedCleaning;
+  String get selectedFrequency => _selectedFrequency;
 
   void changeSelecteedCleaning(String newval) {
-    _selectedCleaning.value = newval;
+    _selectedCleaning = newval;
+    notifyListeners();
+  }
+
+  void changeSelecteedFrequency(String newval) {
+    _selectedFrequency = newval;
     notifyListeners();
   }
 }

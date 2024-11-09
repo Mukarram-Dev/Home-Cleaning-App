@@ -1,8 +1,10 @@
+import 'package:cleaningapp/config/theme/colors.dart';
+import 'package:cleaningapp/config/theme/text_theme_style.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'package:cleaningapp/ColorScheme.dart';
 
 class CalendarPage extends StatelessWidget {
+  const CalendarPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,7 +24,7 @@ class _calendarPageState extends State<calendarPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: purple,
+      backgroundColor: AppColors.primaryColor,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -54,14 +56,28 @@ class _calendarPageState extends State<calendarPage> {
               rightChevronMargin: EdgeInsets.only(right: 70),
             ),
             calendarStyle: CalendarStyle(
-                weekendTextStyle: TextStyle(color: Colors.white),
-                weekNumberTextStyle: TextStyle(color: Colors.white)),
+              todayTextStyle: TextStyle(
+                color: AppColors.primaryColor,
+              ),
+              todayDecoration: BoxDecoration(
+                color: AppColors.white,
+                shape: BoxShape.circle,
+              ),
+              selectedDecoration: BoxDecoration(
+                color: AppColors.secondaryColor,
+                shape: BoxShape.circle,
+              ),
+              weekendTextStyle: TextStyle(color: Colors.white),
+              weekNumberTextStyle: TextStyle(color: Colors.white),
+            ),
             daysOfWeekStyle: DaysOfWeekStyle(
-                weekendStyle: TextStyle(color: Colors.white),
-                weekdayStyle: TextStyle(color: Colors.white)),
-            focusedDay: DateTime(2024),
-            firstDay: DateTime(2024),
-            lastDay: DateTime(2024),
+              weekendStyle: TextStyle(color: Colors.white),
+              weekdayStyle: TextStyle(color: Colors.white),
+            ),
+            focusedDay: DateTime.now(),
+            firstDay: DateTime(2001),
+            lastDay: DateTime(2026),
+            onDaySelected: (selectedDay, focusedDay) {},
           ),
           SizedBox(
             height: 5,
@@ -127,13 +143,16 @@ class _calendarPageState extends State<calendarPage> {
           child: Container(
             margin: EdgeInsets.only(bottom: 20),
             padding: EdgeInsets.all(20),
-            color: Color(0xffdfdeff),
+            color: AppColors.primaryColor.withOpacity(0.2),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   name,
-                  style: TextStyle(color: purple, fontWeight: FontWeight.w700),
+                  style: AppTextStyles.textLabel(
+                    color: AppColors.black,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
                 SizedBox(
                   height: 10,
@@ -151,7 +170,7 @@ class _calendarPageState extends State<calendarPage> {
                   children: [
                     Icon(
                       Icons.timer,
-                      color: purple,
+                      color: AppColors.black,
                     ),
                     SizedBox(
                       width: 5,
@@ -159,7 +178,7 @@ class _calendarPageState extends State<calendarPage> {
                     Text(
                       "$time - 5 pm",
                       style: TextStyle(
-                          color: purple,
+                          color: AppColors.black,
                           fontSize: 13,
                           fontWeight: FontWeight.w600),
                     )
@@ -197,14 +216,14 @@ class _calendarPageState extends State<calendarPage> {
                   children: [
                     Icon(
                       Icons.call,
-                      color: purple,
+                      color: AppColors.black,
                     ),
                     SizedBox(
                       width: 5,
                     ),
                     Icon(
                       Icons.mail_outline,
-                      color: purple,
+                      color: AppColors.black,
                     ),
                     Expanded(
                       child: Container(),
@@ -212,7 +231,7 @@ class _calendarPageState extends State<calendarPage> {
                     Text(
                       "\$50",
                       style: TextStyle(
-                          color: purple,
+                          color: AppColors.black,
                           fontSize: 16,
                           fontWeight: FontWeight.w600),
                     )
