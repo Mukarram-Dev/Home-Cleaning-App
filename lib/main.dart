@@ -1,4 +1,5 @@
 import 'package:cleaningapp/config/routes/routes.dart';
+import 'package:cleaningapp/config/theme/colors.dart';
 import 'package:cleaningapp/providers/home_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'ubuntu',
+          scaffoldBackgroundColor: AppColors.white,
         ),
       ),
     );

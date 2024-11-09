@@ -4,6 +4,7 @@ import 'package:cleaningapp/views/calender/CalendarPage.dart';
 import 'package:cleaningapp/views/home/home_view.dart';
 import 'package:cleaningapp/views/service%20booking/service_booking_view.dart';
 import 'package:cleaningapp/views/onborading/onboarding_view.dart';
+import 'package:cleaningapp/views/services%20page/services_view.dart';
 
 import 'package:go_router/go_router.dart';
 
@@ -33,6 +34,11 @@ final router = GoRouter(
       path: RouteName.serviceBookRoute,
       builder: (context, state) => const ServiceBookingView(),
       name: RouteName.serviceBookRoute,
+    ),
+    GoRoute(
+      path: RouteName.servicesRoute,
+      builder: (context, state) => const ServicesView(),
+      name: RouteName.servicesRoute,
     ),
   ],
 );

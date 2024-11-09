@@ -4,4 +4,5 @@ class RouteName {
   static const String homeRoute = "/home";
   static const String calenderRoute = "/calender";
   static const String serviceBookRoute = "/service-book";
+  static const String servicesRoute = "/services";
 }
