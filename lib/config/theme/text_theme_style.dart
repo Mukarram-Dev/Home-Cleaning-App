@@ -30,6 +30,20 @@ class AppTextStyles {
     );
   }
 
+  static TextStyle textNormal({
+    Color color = AppColors.black,
+    double fontSize = 20,
+    FontWeight fontWeight = FontWeight.w700,
+    String fontFamily = 'ubuntu',
+  }) {
+    return TextStyle(
+      color: color,
+      fontSize: fontSize,
+      fontWeight: fontWeight,
+      fontFamily: fontFamily,
+    );
+  }
+
   static TextStyle textBody({
     Color color = AppColors.colorText,
     double fontSize = 16,
