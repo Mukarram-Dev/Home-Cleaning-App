@@ -13,15 +13,7 @@ class SplashView extends StatelessWidget {
       backgroundColor: AppColors.primaryColor,
       body: Column(
         children: [
-          Gaps.verticalGapOf(30),
-          Container(
-            width: 100,
-            height: 50,
-            margin: EdgeInsets.only(top: 40),
-            decoration: BoxDecoration(
-                image:
-                    DecorationImage(image: AssetImage('asset/image/logo.png'))),
-          ),
+          Gaps.verticalGapOf(50),
           SizedBox(
             height: 30,
           ),
