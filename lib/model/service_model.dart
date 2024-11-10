@@ -4,6 +4,7 @@ class ServiceModel {
   String servicemen;
   String price;
   double rating;
+  String category;
 
   ServiceModel(
     this.title,
@@ -11,5 +12,6 @@ class ServiceModel {
     this.servicemen,
     this.price,
     this.rating,
+    this.category,
   );
 }
